@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Hero from '../components/landing/Hero'
 import StatsStrip from '../components/landing/StatsStrip'
 import FeatureGrid from '../components/landing/FeatureGrid'
@@ -24,12 +23,12 @@ export default function LandingPage() {
               Become a Payment Agent and earn competitive commissions, and manage everything from a single dashboard.
             </p>
           </div>
-          <Link
-            to="/dashboard"
+          <a
+            href="#apply"
             className="shrink-0 rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
           >
             Become a Payment Agent
-          </Link>
+          </a>
         </div>
       </section>
 

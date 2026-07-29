@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import LoginModal from './LoginModal'
 
 type Theme = 'light' | 'dark'
 
@@ -12,6 +13,7 @@ function getInitialTheme(): Theme {
 export default function NavBar() {
   const location = useLocation()
   const [theme, setTheme] = useState<Theme>(getInitialTheme)
+  const [loginOpen, setLoginOpen] = useState(false)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -78,8 +80,17 @@ export default function NavBar() {
               </svg>
             )}
           </button>
+          <button
+            type="button"
+            onClick={() => setLoginOpen(true)}
+            className="ml-1 rounded-md bg-brand px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+          >
+            Log in
+          </button>
         </nav>
       </div>
+
+      <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
     </header>
   )
 }

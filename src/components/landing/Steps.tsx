@@ -15,7 +15,7 @@ const STEPS = [
 
 export default function Steps() {
   return (
-    <section className="border-t border-hairline bg-surface">
+    <section id="apply" className="scroll-mt-20 border-t border-hairline bg-surface">
       <div className="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6">
         <p className="text-sm font-medium uppercase tracking-wide text-brand">How to become a payment agent</p>
         <h2 className="mt-2 text-3xl font-semibold text-ink-primary">Three steps to get started</h2>
